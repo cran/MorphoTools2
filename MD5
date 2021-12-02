@@ -1,4 +1,4 @@
-f001fe96c5d8786553b0a1bfdb220b62 *DESCRIPTION
+f61d9083c78665855d420c3e41f55d88 *DESCRIPTION
 778182ce17fa9ca57fb39822a8edff9d *NAMESPACE
 3e512c6b1989e738fb412d52bd10b3cf *R/BoxMTest.R
 590431088db66eeb0a1e62af8dba1287 *R/SampsPopsTax.R
@@ -27,7 +27,7 @@ ec25f5fbfd5c4e46034bbbc9cc88153f *R/export.res.R
 1d8c6c3623386baf57d132322916a71d *R/newObject.R
 2e1882ba3fbb59ee8e825da9b5ef6c87 *R/nmds.calc.R
 dc3441b4e4f10eced62cfce05e6063fd *R/pca.calc.R
-388bf2de1705867945ec6ca716c1007e *R/pcoa.calc.R
+85baccdcb8f7cbc921a6cc584e58d357 *R/pcoa.calc.R
 f212849d8eebe60b5d4c670dc3f2168e *R/plot.3Dpoints.R
 4602dc4f5746c69444a49774abc03889 *R/plot.R
 cff4c5fcd1905d6a6880dbdf11e87ee4 *R/plot.addEllipses.R
@@ -46,14 +46,13 @@ a9d9fd496b5c11666fa93fc37cc726f1 *R/print.R
 0e64abbd1f62c897b72fa7f1a7a87915 *R/summary.R
 d532b2d3de26c67af8c3e4a0c2567d65 *R/transformCharacter.R
 df117fd1648d78e326b67da4966b39ba *R/viewMorphodata.R
-0bf9a48db2e0e2d2cb3deceeb8adfd25 *R/zzz.R
-10fca9a836572ba1a4ef4fe839f9449f *README.md
+3361fd51c1251d0bd7d7f6aa7b9999ad *R/zzz.R
+1cdef8f99527cbe3ce8a5b91e29b44b8 *README.md
 4c81a9be06c55cb9bba1ee43be173953 *build/vignette.rds
 2d4554f4c6539b7188a3a55522dd295a *data/centaurea.rda
-a973937cbafccc1e5de209bf385ea766 *inst/CITATION
-2868753a4dfad35ffba48f0b6c314aca *inst/doc/MorphoTools2_tutorial.R
-cfa6707ca4068c6c150a75674fc29dfb *inst/doc/MorphoTools2_tutorial.Rmd
-4f256041fe5a4f73c75fcbb02c189c44 *inst/doc/MorphoTools2_tutorial.pdf
+4b26b7460b7aba35bf2f428254aecf5e *inst/doc/MorphoTools2_tutorial.R
+69cfac4d755801065e961f4387d435b1 *inst/doc/MorphoTools2_tutorial.Rmd
+5fb2766fc196ec9ee119a1cecea3ee9b *inst/doc/MorphoTools2_tutorial.pdf
 55afa8b41bec33cb137c6e0bbce03c12 *inst/extdata/centaurea.txt
 c3a5f2cc2c53648bdb807d8286da7447 *inst/extdata/centaurea.xlsx
 f157ec04832dff9637afe12fb6d3f5fa *man/boxMTest.Rd
@@ -148,7 +147,7 @@ a15f26516f692caba50f6e623b6f8f06 *tests/testthat/test.newCdadata.R
 d70a90ecda1b01f5b6aea5e318cc66dd *tests/testthat/test.newPcadata.R
 c4bd5dfd836fc9ec01168cd2d019ee63 *tests/testthat/test.newPcoadata.R
 20d9da8f306fed397d2ef194633c4426 *tests/testthat/test.pca.calc.R
-689a17ab9a99d6770d5c4218aef53c96 *tests/testthat/test.pcoa.calc.R
+71129b69fd262a354e0948bc21b5ba43 *tests/testthat/test.pcoa.calc.R
 b80a655bca75cf0f3eac7e832aaa2925 *tests/testthat/test.plot.addEllipse.R
 1632bd74afe1b98afbd4b64c8f270107 *tests/testthat/test.plot.addLabels.characters_hist.R
 12e03cc483ced429796b533223f4de42 *tests/testthat/test.plot.addLabels.characters_scatter.R
@@ -160,7 +159,7 @@ b80a655bca75cf0f3eac7e832aaa2925 *tests/testthat/test.plot.addEllipse.R
 dc31b5c48f79cce2b2ce0947ba3ac335 *tests/testthat/test.plot.points.cdadata_hist.R
 7b36b30628c6a0c9b1f4402b819e6ed1 *tests/testthat/test.plot.points.cdadata_scatter.R
 3bb28a6cec3ee491f5a51edaf9afc595 *tests/testthat/test.plot.points.pcadata.R
-cecb96b500b2ec959e5ae20ef1b396ce *tests/testthat/test.plot.points.pcoadata.R
+3ee6decf33066b0e57fdb5f67758723d *tests/testthat/test.plot.points.pcoadata.R
 7e572cb1de4161a0cc84745619e62a61 *tests/testthat/test.plot3Dpoints.cdadata.R
 dbe843086989d225e1c7724491d698a3 *tests/testthat/test.plot3Dpoints.pcadata.R
 f6f27707fff4090293e9d89ecd44b02a *tests/testthat/test.popul.otu.R
@@ -176,7 +175,7 @@ db2d21d03eb0d7b7d123ce8c946f0bd9 *tests/testthat/test.setValuesForVector.R
 a1faaf55dfea86df07ffcd84f4f36283 *tests/testthat/test.summary.pcoadata.R
 25b256fc4cc0b26f372856c6be880141 *tests/testthat/test.taxa.R
 5688431f2b705ea62aca141271707804 *tests/testthat/test.transformCharacter.R
-cfa6707ca4068c6c150a75674fc29dfb *vignettes/MorphoTools2_tutorial.Rmd
+69cfac4d755801065e961f4387d435b1 *vignettes/MorphoTools2_tutorial.Rmd
 a68d4954c22099469410a3b3dc648c9e *vignettes/pandoc3da839df6963.tex
 4d3361c72209d8fe5bb2fe42ce8bb14d *vignettes/pandoc69441f229c0.tex
 b787e3172f5ba91b72dfdb57f141d41d *vignettes/pch.png

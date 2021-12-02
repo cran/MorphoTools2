@@ -2,7 +2,7 @@
 knitr::opts_chunk$set(
   dev="png",
   highlight = TRUE,
-  dpi = 100,
+  dpi = 150,
   collapse = TRUE,
   comment = "#>",
   rownames = FALSE, 

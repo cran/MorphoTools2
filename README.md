@@ -4,6 +4,8 @@
 # MorphoTools2
 
 <!-- badges: start -->
+[![CRAN_Status_Badge](https://www.r-pkg.org/badges/version/MorphoTools2)](https://CRAN.R-project.org/package=MorphoTools2)
+[![CRAN Downloads Total](https://cranlogs.r-pkg.org/badges/MorphoTools2?color=brightgreen)](https://cran.r-project.org/package=MorphoTools2)
 <!-- badges: end -->
 
 The package `MorphoTools2` is intended for multivariate analyses of
@@ -17,13 +19,13 @@ making the workflow convenient and fast.
 ## Installation
 
 You can install the released version of MorphoTools2 from
-[CRAN](https://CRAN.R-project.org) with:
+[CRAN](https://CRAN.R-project.org/package=MorphoTools2) with:
 
 ``` r
 install.packages("MorphoTools2")
 ```
 
-And the development version from [GitHub](https://github.com/) with:
+And the development version from [GitHub](https://github.com/MarekSlenker/MorphoTools2) with:
 
 ``` r
 # install.packages("devtools")
