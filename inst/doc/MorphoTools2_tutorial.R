@@ -1,8 +1,8 @@
 ## ---- eval=TRUE, include = FALSE----------------------------------------------
 knitr::opts_chunk$set(
-  dev="png",
+  dev="pdf",
   highlight = TRUE,
-  dpi = 150,
+  dpi = 1,
   collapse = TRUE,
   comment = "#>",
   rownames = FALSE, 
@@ -186,13 +186,13 @@ pops = populOTU(centaurea)
 ## ----echo = FALSE, eval = TRUE------------------------------------------------
 rm(populOTU)
 
-## ----echo = FALSE, eval=TRUE, warning=FALSE-----------------------------------
-pops = populOTU(centaurea)
+## ----echo = FALSE, eval=TRUE--------------------------------------------------
+pops = suppressWarnings(populOTU(centaurea))
 
 ## ----include = FALSE----------------------------------------------------------
 options(max.print = 800)
-centaurea = deletePopulation(centaurea, populationName = c("BRT", "CERV", "HVLT", "KASH", "KRO", "MIL", "NSED", "CERM", "BABL", "OLE1", "OLE2", "PRIS", "PROS", "SOK", "STGH"))
-# centaurea = deleteCharacter(centaurea, characterName = c("SF", "ST", "IW", "ILW", "MW", "MLW", "AL", "ALW"))
+centaurea = removePopulation(centaurea, populationName = c("BRT", "CERV", "HVLT", "KASH", "KRO", "MIL", "NSED", "CERM", "BABL", "OLE1", "OLE2", "PRIS", "PROS", "SOK", "STGH"))
+# centaurea = removeCharacter(centaurea, characterName = c("SF", "ST", "IW", "ILW", "MW", "MLW", "AL", "ALW"))
 
 ## ----echo = TRUE, eval=TRUE---------------------------------------------------
 # For demonstration only. Not all populations are displayed.
@@ -200,7 +200,7 @@ missingCharactersTable(centaurea, level = "pop")
 
 ## ----include = FALSE----------------------------------------------------------
 centaurea$data = centaurea$data[-seq(4,10,1)]
-centaurea = deleteCharacter(centaurea, characterName = c("SF", "ST", "IW", "ILW", "MW", "MLW", "AL", "ALW", "AW", "IL"))
+centaurea = removeCharacter(centaurea, characterName = c("SF", "ST", "IW", "ILW", "MW", "MLW", "AL", "ALW", "AW", "IL"))
 
 ## ----echo = TRUE, eval = TRUE-------------------------------------------------
 # For demonstration purposes only. Only a subset of data is displayed.
@@ -211,20 +211,24 @@ data("centaurea")
 options(max.print = 60)
 
 ## ----echo = TRUE, eval=TRUE---------------------------------------------------
-centaurea = deletePopulation(centaurea, populationName = c("LIP", "PREL"))
-pops = deletePopulation(pops, populationName = c("LIP", "PREL"))
-
-## ----echo = TRUE, eval=TRUE---------------------------------------------------
-centaurea = naMeanSubst(centaurea)
+centaurea = removePopulation(centaurea, populationName = c("LIP", "PREL"))
+pops = removePopulation(pops, populationName = c("LIP", "PREL"))
 
 ## ----echo = TRUE, eval=FALSE--------------------------------------------------
-#  pops_hierClust = clust(pops, distMethod = "Euclidean", clustMethod = "UPGMA")
-#  plot(pops_hierClust, hang = -1, sub = "", xlab = "", ylab = "distance")
+#  centaurea = naMeanSubst(centaurea)
+
+## ----include = FALSE----------------------------------------------------------
+centaurea = suppressWarnings(naMeanSubst(centaurea))
+
+
+## ----echo = TRUE, eval=FALSE--------------------------------------------------
+#  hierClust = clust(pops, distMethod = "Euclidean", clustMethod = "UPGMA")
+#  plot(hierClust, hang = -1, sub = "", xlab = "", ylab = "distance")
 
 ## ----hierClust, echo = FALSE, eval=TRUE, fig.width= 5, fig.height=3-----------
 graphics::par(mar=c(3, 4.1, 1.5, 2.1), mgp=c(1.7, 0.6, 0), cex.axis=0.8, cex.lab=0.8, lwd=0.9)
-pops_hierClust = clust(pops, distMethod = "Euclidean", clustMethod = "UPGMA")
-plot(pops_hierClust, hang = -1, sub = "", xlab = "", ylab = "distance", cex=0.6, cex.main=1)
+hierClust = clust(pops, distMethod = "Euclidean", clustMethod = "UPGMA")
+plot(hierClust, hang = -1, sub = "", xlab = "", ylab = "distance", cex=0.6, cex.main=1)
 
 
 ## ----echo = TRUE, eval=TRUE---------------------------------------------------
@@ -542,7 +546,7 @@ graphics::par(mar=c(3, 4.1, 0, 2.1), mgp=c(1.7, 0.6, 0), cex.axis=0.8, cex.lab=0
 plot3Dpoints(cda.centaurea, col = c("blue","green","red","orange"), phi = 12, theta = 25)
 
 ## ----echo = TRUE, eval=TRUE, out.width = '320px'------------------------------
-stPsHybr = deleteTaxon(centaurea, taxonName = "ph")
+stPsHybr = removeTaxon(centaurea, taxonName = "ph")
 cda.stPsHybr = cda.calc(stPsHybr)
 
 ## ----echo = TRUE, eval=FALSE--------------------------------------------------
@@ -675,7 +679,7 @@ classif.matrix(classifRes.knn, level = "taxon")
 #  exportRes(popClassifMatrix, file = "clipboard")
 
 ## ----echo = TRUE, eval=TRUE---------------------------------------------------
-trainingSet = deletePopulation(partialCent, populationName = "LES")
+trainingSet = removePopulation(partialCent, populationName = "LES")
 typeSpecimen = keepSample(partialCent, "LES1116")
 
 classifSample.lda(typeSpecimen, trainingSet)

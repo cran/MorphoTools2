@@ -1,6 +1,6 @@
-#' Keep items (Taxa, Populations, morphological characters) in an morphodata object (and remove other)
+#' Remove items (Taxa, Populations, morphological characters) from an morphodata object
 #' @export
-keepTaxon <- function(object, taxonName) {
+removeTaxon <- function(object, taxonName) {
   .checkClass(object, "morphodata")
 
   # skontroluj ci object ma taxName
@@ -8,13 +8,13 @@ keepTaxon <- function(object, taxonName) {
     if (! (tax %in% object$Taxon)) stop(paste("Taxon \"", tax , "\" does not exist.", sep = ""), call. = FALSE)
   }
 
-  return(.keepByColumn(object, "Taxon", taxonName))
+  return(.removeByColumn(object, "Taxon", taxonName))
 }
 
 
-#' @rdname keepTaxon
+#' @rdname removeTaxon
 #' @export
-keepPopulation <- function(object, populationName) {
+removePopulation <- function(object, populationName) {
   .checkClass(object, "morphodata")
 
   # skontroluj ci object ma popname
@@ -22,42 +22,40 @@ keepPopulation <- function(object, populationName) {
     if (! (pop %in% object$Population)) stop(paste("Population \"", pop , "\" does not exist.", sep = ""), call. = FALSE)
   }
 
-  return(.keepByColumn(object, "Population", populationName))
+  return(.removeByColumn(object, "Population", populationName))
 }
 
-
-#' @rdname keepTaxon
+#' @rdname removeTaxon
 #' @export
-keepSample <- function(object, sampleName = NULL, missingPercentage = NA) {
+removeSample <- function(object, sampleName = NULL, missingPercentage = NA) {
   .checkClass(object, "morphodata")
 
   # nemozu byt oba nenulova
   if (!is.na(missingPercentage) && !is.null(sampleName)) stop("Not implemented, use arguments 'sampleName' and 'missingPercentage' in separate runs.", call. = FALSE)
 
-
   if (!is.null(sampleName)) {
 
-    if (!all(is.character(sampleName))) stop("'sampleName' is not a string.", call. = FALSE)
+    # if (!all(is.character(sampleName))) stop("'sampleName' is not a string.", call. = FALSE)
 
     # skontroluj ci object ma popname
     for (samp in sampleName) {
       if (! (samp %in% object$ID)) stop(paste("Sample \"", samp , "\" does not exist.", sep = ""), call. = FALSE)
     }
 
-    return(.keepByColumn(object, "ID", sampleName))
+    return(.removeByColumn(object, "ID", sampleName))
   }
 
   if (!is.na(missingPercentage)) {
 
     if (!is.numeric(missingPercentage)) stop("'missingPercentage' is not numeric.", call. = FALSE)
 
-    toKeep = rowMeans(is.na(object$data)) <= missingPercentage # ponecham tie, ktore maju max missingPercentage
+    aboveTreshold = rowMeans(is.na(object$data)) > missingPercentage
 
     newObject = .newMorphodata()
-    newObject$ID = droplevels( object$ID[toKeep] )
-    newObject$Population = droplevels( object$Population[toKeep] )
-    newObject$Taxon = droplevels( object$Taxon[toKeep] )
-    newObject$data = object$data[toKeep, ]
+    newObject$ID = droplevels( object$ID[!aboveTreshold] )
+    newObject$Population = droplevels( object$Population[!aboveTreshold] )
+    newObject$Taxon = droplevels( object$Taxon[!aboveTreshold] )
+    newObject$data = object$data[!aboveTreshold, ]
 
     return(newObject)
   }
@@ -69,9 +67,9 @@ keepSample <- function(object, sampleName = NULL, missingPercentage = NA) {
 }
 
 
-#' @rdname keepTaxon
+#' @rdname removeTaxon
 #' @export
-keepCharacter <- function(object, characterName) {
+removeCharacter <- function(object, characterName) {
   .checkClass(object, "morphodata")
 
   # check existence of CH
@@ -80,41 +78,45 @@ keepCharacter <- function(object, characterName) {
   }
 
   # character - moze byt i viac
-  toKeep = array(data = NA, dim = 0)
+  toRemove = array(data = NA, dim = 0)
   for (ch in characterName) {
-    toKeep = c(toKeep, which(colnames(object$data) == ch) )
+    toRemove = c(toRemove, which(colnames(object$data) == ch) )
   }
 
-  if (length(toKeep)>1) {
-    object$data = object$data[ ,toKeep]
+
+  if (length(toRemove) == dim(object$data)[2]-1) {
+
+    colName = colnames(object$data)[-toRemove]
+    object$data = data.frame(object$data[ ,-toRemove])
+    colnames(object$data) = colName
+
   } else {
-    object$data = data.frame(object$data[ ,toKeep])
-    colnames(object$data) = characterName
+    object$data = object$data[ ,-toRemove]
   }
-
 
   return(object)
 }
 
 
 # internal
-.keepByColumn <- function(object, column, groupName) {
+.removeByColumn <- function(object, column, groupName) {
   # obj je triedy morfodata, skontrolovane vyssie
 
   # groupName moze byt i viac
-  toKeep = array(data = NA, dim = 0)
+  toRemove = array(data = NA, dim = 0)
   for (name in groupName) {
-    toKeep = c(toKeep, which( unlist(object[column]) %in% name) )
+    toRemove = c(toRemove, which( unlist(object[column]) %in% name) )
   }
 
   newObject = .newMorphodata()
-  newObject$ID = droplevels( object$ID[toKeep] )
-  newObject$Population = droplevels( object$Population[toKeep] )
-  newObject$Taxon = droplevels( object$Taxon[toKeep] )
-  newObject$data = object$data[toKeep, ]
+  newObject$ID = droplevels( object$ID[-toRemove] )
+  newObject$Population = droplevels( object$Population[-toRemove] )
+  newObject$Taxon = droplevels( object$Taxon[-toRemove] )
+  newObject$data = object$data[-toRemove, ]
 
   return(newObject)
 }
+
 
 
 

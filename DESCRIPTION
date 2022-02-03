@@ -1,8 +1,8 @@
 Package: MorphoTools2
 Type: Package
 Title: Multivariate Morphometric Analysis
-Version: 0.9.1.1
-Date: 2021-11-05
+Version: 0.9.1.2
+Date: 2022-01-28
 Author: Marek Šlenker [aut, cre] (https://orcid.org/0000-0002-5919-890X)
         Petr Koutecký [ctb] (https://orcid.org/0000-0002-3455-850X)
         Karol Marhold [ctb] (https://orcid.org/0000-0002-7658-0844)
@@ -15,11 +15,11 @@ License: GPL-3
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.1.2
-Imports: ade4, candisc, car, class, ellipse, fpc, heplots, MASS,
-        methods, plot3D, StatMatch, utils, vegan, stats
+Imports: ade4, candisc, car, class, ellipse, heplots, MASS, methods,
+        plot3D, StatMatch, utils, vegan, stats
 Suggests: testthat, knitr, rmarkdown
 VignetteBuilder: knitr
 NeedsCompilation: no
-Packaged: 2021-12-06 18:37:04 UTC; HP
+Packaged: 2022-02-02 15:51:06 UTC; mint
 Repository: CRAN
-Date/Publication: 2021-12-07 07:50:12 UTC
+Date/Publication: 2022-02-03 12:40:06 UTC
