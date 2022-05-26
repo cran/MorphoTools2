@@ -15,8 +15,8 @@ knitr::opts_chunk$set(
 old.par <- par(no.readonly = TRUE)  
 
 ## ----eval=FALSE, include=TRUE-------------------------------------------------
-#  install.packages(MorphoTools2)
-#  library(MorphoTools2)
+#  install.packages("MorphoTools2")
+#  library("MorphoTools2")
 #  
 
 ## ----include=FALSE, eval=TRUE-------------------------------------------------
@@ -30,7 +30,7 @@ library(MorphoTools2)
 data(centaurea)
 
 ## ----eval = FALSE, echo = TRUE------------------------------------------------
-#  centaurea = read.morphodata(file = "<PATH TO centaurea.txt>", dec = ".", sep = "\t")
+#  centaurea = read.morphodata(file = "<PATH>/centaurea.txt", dec = ".", sep = "\t")
 #  centaurea = read.morphodata(file = "clipboard")
 
 ## ----echo = FALSE, eval = TRUE------------------------------------------------
