@@ -1,5 +1,6 @@
-e82064d6d8ec60e8cd48c1ea1f53bf2a *DESCRIPTION
+4680fba57859158c13312e58d03d4514 *DESCRIPTION
 d13294c4d0227449a41bb7493e0faf13 *NAMESPACE
+236a3fea2a29aeb8717a6d2f98628291 *NEWS.md
 3e512c6b1989e738fb412d52bd10b3cf *R/BoxMTest.R
 590431088db66eeb0a1e62af8dba1287 *R/SampsPopsTax.R
 2d6d100f3fab703e53f95c6e08a6fe74 *R/boxplots.R
@@ -7,8 +8,8 @@ b55797ea84161972a3f8e9201f77395d *R/calcDistance.R
 8fbb76379068758d85a4626d8745db28 *R/cda.calc.R
 0dc5ae0c77fa2dbd328a7368c3654a89 *R/centaurea.R
 d775575ad4f869b9477849f0a8a78f65 *R/classif.knn.R
-90910ddde719e153c02b6920cc826a72 *R/classif.lda.R
-b34de97e7566e78b03a0ee5b2b9f1843 *R/classif.qda.R
+72cf1fbc343f9484d71f8d82201dc4f1 *R/classif.lda.R
+78985cbfb85325b5f8143a45075c151c *R/classif.qda.R
 81745d7543a8eb315ac53357bbf96df7 *R/classifMatrix.R
 83ce438a40f76c8ba00e3317017c678c *R/classifSample.knn.R
 d15c747e8cfff541f4b59013c12e73ec *R/classifSample.lda.R
@@ -23,7 +24,7 @@ ec25f5fbfd5c4e46034bbbc9cc88153f *R/export.res.R
 0ad0ecea10dc802a846f4c12ea487764 *R/knn.select.R
 89569d009e9e7206a715ff610637ea73 *R/missingDataTable.R
 449afe97f227a735d282ae64942135ee *R/na.meanSubst.R
-1d8c6c3623386baf57d132322916a71d *R/newObject.R
+281d4aa436f01cdd9ab33ee8497b832f *R/newObject.R
 2e1882ba3fbb59ee8e825da9b5ef6c87 *R/nmds.calc.R
 dc3441b4e4f10eced62cfce05e6063fd *R/pca.calc.R
 16336960f52eac6e78520930eabf70f6 *R/pcoa.calc.R
@@ -37,13 +38,13 @@ dfd573bbed83386e78b835ad29dcd741 *R/plot.addLegend.R
 68fc108b903e85451f3879dee0e4b505 *R/plot.characters.R
 a84f6fab992260bf3e38d558e57fd921 *R/plot.points.R
 5f3ea6526f82b0e4fc0c7153c567af22 *R/popul.otu.R
-a9d9fd496b5c11666fa93fc37cc726f1 *R/print.R
+cbc3a5df0942590eddb2e482cd88a8f0 *R/print.R
 9168716fd844dd5b583aa538bbaa8f76 *R/qq.R
 4433698f2f06fe870754f48b27cc5a52 *R/read.morphodata.R
 4434aab7aba6951578772ed7d0bfbb0c *R/remove.itemFromMorphodataObject.R
 07b9ad4aa84b5787f322750ca66fbb68 *R/shapirowilk.R
 7439a847dbcc1836fc0eb70723f6dc18 *R/stepdisc.calc.R
-0e64abbd1f62c897b72fa7f1a7a87915 *R/summary.R
+7f2ea519d25fe5dd3be229e95d6d6746 *R/summary.R
 d532b2d3de26c67af8c3e4a0c2567d65 *R/transformCharacter.R
 df117fd1648d78e326b67da4966b39ba *R/viewMorphodata.R
 4d72decd0b867fcf12e724c81cf8f432 *R/zzz.R
@@ -51,9 +52,9 @@ df117fd1648d78e326b67da4966b39ba *R/viewMorphodata.R
 4c81a9be06c55cb9bba1ee43be173953 *build/vignette.rds
 2d4554f4c6539b7188a3a55522dd295a *data/centaurea.rda
 0403012caff8e2869bb15426aa59e28f *inst/CITATION
-588dd4ae0cd8d32278468c63bcc10d77 *inst/doc/MorphoTools2_tutorial.R
-e9e95d004882b51aef91e4917b72928c *inst/doc/MorphoTools2_tutorial.Rmd
-b0a3ca2b060a5e201dac502914aec9c8 *inst/doc/MorphoTools2_tutorial.pdf
+173d642721e901b38604b701f0ff789a *inst/doc/MorphoTools2_tutorial.R
+fcde61f102be2d0d9fe17a2a56f7dfaf *inst/doc/MorphoTools2_tutorial.Rmd
+5d1714a5c7ad96d9549f46ea545a3f44 *inst/doc/MorphoTools2_tutorial.pdf
 55afa8b41bec33cb137c6e0bbce03c12 *inst/extdata/centaurea.txt
 c3a5f2cc2c53648bdb807d8286da7447 *inst/extdata/centaurea.xlsx
 6606d049a3a524f020fa1bc73ec179f7 *man/boxMTest.Rd
@@ -62,10 +63,10 @@ ddaba367261c93f90e89b1bd3e3cdb34 *man/cda.calc.Rd
 4407cafd77890b6ca661b305a44eaa4b *man/cdadata.Rd
 1cbce3c096b10cff95a5c8bea0bd178f *man/centaurea.Rd
 43682f5a98ca3c3cf89dfd461e9c3530 *man/characters.Rd
-6f113cc6cd8b22dc5393e3b65be25438 *man/classif.lda.Rd
+e4a307477b8b2451ae69bbf6b42c5883 *man/classif.lda.Rd
 e5deadff6f6486894b4ffe18be57a291 *man/classif.matrix.Rd
 db76f3f82f8fc5a2459040a79e499db1 *man/classifSample.lda.Rd
-e5a6b5e08f064303ed6c036500a32610 *man/classifdata.Rd
+21c1dadea5b7e9454a08e3f338776462 *man/classifdata.Rd
 803c1e79ec8ac617fe94392809aaf56f *man/clust.Rd
 e866bf010dcca808cfd587aa9f9cdf32 *man/cormat.Rd
 0d5b57ad8b53fcce18fb28b69eec770d *man/descrTaxon.Rd
@@ -176,5 +177,5 @@ db2d21d03eb0d7b7d123ce8c946f0bd9 *tests/testthat/test.setValuesForVector.R
 a1faaf55dfea86df07ffcd84f4f36283 *tests/testthat/test.summary.pcoadata.R
 25b256fc4cc0b26f372856c6be880141 *tests/testthat/test.taxa.R
 5688431f2b705ea62aca141271707804 *tests/testthat/test.transformCharacter.R
-e9e95d004882b51aef91e4917b72928c *vignettes/MorphoTools2_tutorial.Rmd
+fcde61f102be2d0d9fe17a2a56f7dfaf *vignettes/MorphoTools2_tutorial.Rmd
 6ec865faff6a0af7302a82c840877b2b *vignettes/pch.pdf

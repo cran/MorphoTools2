@@ -623,14 +623,20 @@ boxMTest(partialCent)
 ## ----echo = TRUE, eval=TRUE---------------------------------------------------
 classifRes.lda = classif.lda(partialCent)
 
+## ----include=F----------------------------------------------------------------
+options(max.print = 185)
+
+## ----echo = TRUE, eval=TRUE---------------------------------------------------
+summary(classifRes.lda)
+
 ## ----echo = TRUE, eval=TRUE---------------------------------------------------
 classif.matrix(classifRes.lda, level = "taxon")
 
-classif.matrix(classifRes.lda, level = "pop")
+## ----include=F----------------------------------------------------------------
+options(max.print = 250)
 
-## ----echo = TRUE, eval=FALSE--------------------------------------------------
-#  classif_lda = classif.matrix(classifRes.lda, level = "indiv")
-#  exportRes(object = classif_lda, file = "lda_classifMatrix.txt")
+## ----echo = TRUE, eval=TRUE---------------------------------------------------
+classif.matrix(classifRes.lda, level = "pop")
 
 ## ----echo = TRUE, eval=TRUE---------------------------------------------------
 classifRes.qda = classif.qda(partialCent)
@@ -638,6 +644,10 @@ classifRes.qda = classif.qda(partialCent)
 
 classif.matrix(classifRes.qda, level = "taxon")
 
+## ----echo = TRUE, eval=FALSE--------------------------------------------------
+#  classif_qda = classif.matrix(classifRes.qda, level = "indiv")
+#  
+#  exportRes(object = classif_qda, file = "qda_classifMatrix.txt")
 
 ## ----echo = FALSE, eval = TRUE------------------------------------------------
 knn.select<-function(object, crossval="indiv"){
@@ -646,9 +656,9 @@ knn.select<-function(object, crossval="indiv"){
   
   ksel = t(ksel)
   
-  for (j in 1:10)
+  for (j in seq(10,100,10))
   {
-    cat("Tested ", j*10, "% of Ks \n")
+    cat("Tested ", j, "% of Ks \n")
   }
   
   kselmean = apply(ksel, MARGIN = 2, FUN = mean)
