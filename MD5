@@ -1,4 +1,4 @@
-4680fba57859158c13312e58d03d4514 *DESCRIPTION
+5401eeead356bc4e406865ec5ac13e67 *DESCRIPTION
 d13294c4d0227449a41bb7493e0faf13 *NAMESPACE
 236a3fea2a29aeb8717a6d2f98628291 *NEWS.md
 3e512c6b1989e738fb412d52bd10b3cf *R/BoxMTest.R
@@ -51,10 +51,10 @@ df117fd1648d78e326b67da4966b39ba *R/viewMorphodata.R
 774456b98e26e62562b94997c64285ac *README.md
 4c81a9be06c55cb9bba1ee43be173953 *build/vignette.rds
 2d4554f4c6539b7188a3a55522dd295a *data/centaurea.rda
-0403012caff8e2869bb15426aa59e28f *inst/CITATION
+d5883103ba5c979d6508fb9950118b42 *inst/CITATION
 173d642721e901b38604b701f0ff789a *inst/doc/MorphoTools2_tutorial.R
-fcde61f102be2d0d9fe17a2a56f7dfaf *inst/doc/MorphoTools2_tutorial.Rmd
-5d1714a5c7ad96d9549f46ea545a3f44 *inst/doc/MorphoTools2_tutorial.pdf
+e5e7a9e401b1479ab03255fb641eb1d7 *inst/doc/MorphoTools2_tutorial.Rmd
+fd29a3a6d020aae719761af326e4a587 *inst/doc/MorphoTools2_tutorial.pdf
 55afa8b41bec33cb137c6e0bbce03c12 *inst/extdata/centaurea.txt
 c3a5f2cc2c53648bdb807d8286da7447 *inst/extdata/centaurea.xlsx
 6606d049a3a524f020fa1bc73ec179f7 *man/boxMTest.Rd
@@ -177,5 +177,5 @@ db2d21d03eb0d7b7d123ce8c946f0bd9 *tests/testthat/test.setValuesForVector.R
 a1faaf55dfea86df07ffcd84f4f36283 *tests/testthat/test.summary.pcoadata.R
 25b256fc4cc0b26f372856c6be880141 *tests/testthat/test.taxa.R
 5688431f2b705ea62aca141271707804 *tests/testthat/test.transformCharacter.R
-fcde61f102be2d0d9fe17a2a56f7dfaf *vignettes/MorphoTools2_tutorial.Rmd
+e5e7a9e401b1479ab03255fb641eb1d7 *vignettes/MorphoTools2_tutorial.Rmd
 6ec865faff6a0af7302a82c840877b2b *vignettes/pch.pdf
