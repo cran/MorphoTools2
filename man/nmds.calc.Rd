@@ -36,7 +36,7 @@ an object of class \code{\link{nmdsdata}} with the following elements:
 }
 
 \details{
-The \code{nmds.calc} function performs non-metric multidimensional scaling using the \code{\link{monoMDS}} function from package \code{\link{vegan}}.
+The \code{nmds.calc} function performs non-metric multidimensional scaling using the \code{\link[vegan]{monoMDS}} function from package \code{\link[vegan]{vegan}}.
 The main threat of NMDS is, that this method doesn't preserve distances among objects in the original character space and approximates only the order of the dissimilarities among objects, based on any coefficient of similarity or distance.
 
 Further, multiple runs of the NMDS analysis are needed to ensure that the stable ordination has been reached, as anyone run may get ``trapped'' in local optima which are not representative of true similarities.

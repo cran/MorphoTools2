@@ -19,7 +19,7 @@ plotAddLegend(result, x = "topright", y = NULL, pch = 16, col = "black",
 \item{x, y}{the x and y coordinates or a single keyword from the list \code{"bottomright"}, \code{"bottom"}, \code{"bottomleft"}, \code{"left"}, \code{"topleft"}, \code{"top"}, \code{"topright"}, \code{"right"}, and \code{"center"}, to be used to position the legend.}
 \item{pch}{the plotting symbols of points appearing in the legend.}
 \item{col}{the colours of points appearing in the legend.}
-\item{pt.bg}{the background colour for the \code{\link{points}}, corresponding to its argument \code{bg}.}
+\item{pt.bg}{the background colour for the \code{\link[graphics]{points}}, corresponding to its argument \code{bg}.}
 \item{pt.cex}{character expansion factor for the points.}
 \item{pt.lwd}{the line width for the points.}
 \item{x.intersp, y.intersp}{character interspacing factor for horizontal (x) and vertical (y) line distances.}
@@ -28,7 +28,7 @@ plotAddLegend(result, x = "topright", y = NULL, pch = 16, col = "black",
 \item{cex}{character expansion factor for text.}
 \item{ncol}{the number of columns in which to set the legend item.}
 \item{horiz}{logical; if \code{TRUE}, set the legend horizontally rather than vertically (specifying horiz overrides the \code{ncol} specification).}
-\item{...}{further arguments to be passed to \code{\link{legend}} or other graphical parameters in \code{\link{par}}.}
+\item{...}{further arguments to be passed to \code{\link[graphics]{legend}} or other graphical parameters in \code{\link[graphics]{par}}.}
 }
 
 \value{

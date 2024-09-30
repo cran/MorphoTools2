@@ -29,7 +29,7 @@ plot3Dpoints(result, axes = c(1,2,3), xlab = NULL, ylab = NULL, zlab = NULL,
 \item{legend}{logical, if \code{TRUE}, legend is displayed. Only restricted number of legend parameters are supported. For more precise legend plotting, use \code{\link{plotAddLegend}} directly.}
 \item{legend.pos}{a single keyword from the list \code{"bottomright"}, \code{"bottom"}, \code{"bottomleft"}, \code{"left"}, \code{"topleft"}, \code{"top"}, \code{"topright"}, \code{"right"}, and \code{"center"}, to be used to position the legend.}
 \item{ncol}{the number of columns in which to set the legend items.}
-\item{...}{further arguments to be passed to \code{\link{plot3D}}, \code{\link{persp}}, \code{\link{par}}.}
+\item{...}{further arguments to be passed to \code{\link[plot3D]{scatter3D}}, \code{\link{persp}}, \code{\link{par}}.}
 }
 
 \value{

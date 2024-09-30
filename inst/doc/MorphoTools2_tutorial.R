@@ -1,4 +1,4 @@
-## ---- eval=TRUE, include = FALSE----------------------------------------------
+## ----eval=TRUE, include = FALSE-----------------------------------------------
 knitr::opts_chunk$set(
   dev="pdf",
   highlight = TRUE,
@@ -269,6 +269,18 @@ plotCharacters(pca.centaurea, cex = 0.5, xlim=c(-0.5, 0.5),ylim=c(-0.5, 0.5), ce
 #  exportRes(pca.centaurea$eigenvectors, file="eigenvectors.centaurea.txt")
 
 ## ----echo = TRUE, eval=FALSE--------------------------------------------------
+#  plotBiplot(pca.centaurea, col = c("blue","green","red","orange"), cex = 0.4,
+#             pch = c(8,17,20,18), legend = T, ncol = 2, legend.pos="bottomright")
+
+## ----plotBiplot, echo = FALSE, eval=TRUE, fig.width= 5, fig.height=3----------
+pca.pops = pca.calc(pops)
+graphics::par(mar=c(2.8, 4.1, 0, 2.1), mgp=c(1.5, 0.5, 0), cex.axis=1, cex.lab=0.8, lwd=0.9)
+# plotBiplot(pca.pops, col = c("blue","green","red","orange"), pch = c(8,17,20,18))
+plotBiplot(pca.centaurea, col = c("blue","green","red","orange"), pch = c(8,17,20,18),
+           cex = 0.4,legend = T, ncol = 2, legend.pos="bottomright")
+
+
+## ----echo = TRUE, eval=FALSE--------------------------------------------------
 #  pca.pops = pca.calc(pops)
 #  plotPoints(pca.pops, col = c("blue","green","red","orange"), pch=c(8,17,20,18),
 #              legend = FALSE, labels = FALSE)
@@ -290,15 +302,24 @@ plotAddLabels.points(pca.pops, labels=c("PROS","SOK","KASH","BOL","CERM","DOM"),
 
 ## ----echo = TRUE, eval=FALSE--------------------------------------------------
 #  plotCharacters(pca.pops, labels = FALSE)
-#  plotAddLabels.characters(pca.pops,labels=c("ILW","MLW","LBA"),pos=4,cex=0.75)
-#  plotAddLabels.characters(pca.pops,labels=c("IW","SFT"),pos=2,offset=0.7)
+#  plotAddLabels.characters(pca.pops,labels=c("ILW","MLW","LBA","IW","SFT"),cex=0.75)
 
 ## ----pca.pops.characters, echo = FALSE, eval=TRUE, fig.width= 3.8, fig.height=3.3----
 graphics::par(mar=c(3, 4.1, 2, 2.1), mgp=c(1.7, 0.6, 0), cex.axis=0.8, cex.lab=0.8, lwd=0.9)
 plotCharacters(pca.pops, labels = FALSE, cex = 0.5, xlim=c(-0.5, 0.5),ylim=c(-0.5, 0.5), cex.main=0.9)
 
-plotAddLabels.characters(pca.pops,labels=c("ILW","MLW","LBA"),pos=4,cex=0.75)
-plotAddLabels.characters(pca.pops,labels=c("IW","SFT"),pos=2,offset=0.7)
+plotAddLabels.characters(pca.pops,labels=c("ILW","MLW","LBA","IW","SFT"),cex=0.75)
+
+
+## ----echo = TRUE, eval=FALSE--------------------------------------------------
+#  plotBiplot(pca.pops, col = c("blue","green","red","orange"),
+#             pch = c(8,17,20,18), legend = T, ncol = 2, legend.pos="bottomright")
+
+## ----plotBiplot2, echo = FALSE, eval=TRUE, fig.width= 5, fig.height=3---------
+pca.pops = pca.calc(pops)
+graphics::par(mar=c(2.8, 4.1, 0, 2.1), mgp=c(1.5, 0.5, 0), cex.axis=1, cex.lab=0.8, lwd=0.9)
+plotBiplot(pca.pops, col = c("blue","green","red","orange"), pch = c(8,17,20,18),
+           legend = T, ncol = 2, legend.pos="bottomright")
 
 
 ## ----echo = TRUE, eval=FALSE--------------------------------------------------
@@ -329,7 +350,6 @@ plotAddSpiders(pca.centaurea, col=c(rgb(0,0,255, max=255, alpha=50), # blue
 
 ## ----echo = TRUE, eval=FALSE--------------------------------------------------
 #  plotPoints(pca.centaurea, col = c("blue","green","red","orange"), cex = 0.5)
-#  
 #  plotAddSpiders(pca.centaurea, col=c(NA,NA,NA,rgb(255,102,0,max=255,alpha=100)))
 
 ## ----pca.spiders2, echo = FALSE, eval=TRUE, fig.width= 5, fig.height=3--------
@@ -523,6 +543,15 @@ plotAddSpiders(cda.centaurea, col = c(rgb(0,0,255,max=255,alpha=130), # blue
 graphics::par(mar=c(3, 4.1, 2, 2.1), mgp=c(1.7, 0.6, 0), cex.axis=0.8, cex.lab=0.8, lwd=0.9)
 plotCharacters(cda.centaurea, cex = 0.7, xlim=c(-1, 1),ylim=c(-1, 1), cex.main=0.9)
 
+## ----echo = TRUE, eval=FALSE--------------------------------------------------
+#  plotBiplot(cda.centaurea, col = c("blue","green","red","orange"), cex = 0.5,
+#             pch = c(8,17,20,18), legend = T, ncol = 2, legend.pos="bottomright")
+
+## ----plotBiplot3, echo = FALSE, eval=TRUE, fig.width= 5, fig.height=3---------
+graphics::par(mar=c(2.8, 4.1, 0, 2.1), mgp=c(1.5, 0.5, 0), cex.axis=1, cex.lab=0.8, lwd=0.9)
+plotBiplot(cda.centaurea, col = c("blue","green","red","orange"), cex = 0.5,
+           pch = c(8,17,20,18), legend = T, ncol = 2, legend.pos="bottomright")
+
 ## ----include=F----------------------------------------------------------------
 options(max.print = 100)
 
@@ -560,8 +589,21 @@ plotPoints(cda.stPsHybr, col = c("blue","red","orange"), pch = c(8,20,18),
 plotAddLegend(cda.stPsHybr, col = c("blue","red","orange"), box.lwd = 0.9,
               x = "bottomright", cex = 0.75, ncol = 2)
 
+## ----include=F----------------------------------------------------------------
+options(max.print = 38)
+
 ## ----echo = TRUE, eval=TRUE---------------------------------------------------
 cda.stPsHybr$totalCanonicalStructure
+
+## ----echo = TRUE, eval=FALSE--------------------------------------------------
+#  plotBiplot(cda.stPsHybr, col = c("blue","red","orange"), pch = c(8,20,18),
+#              legend = T, ncol = 2, legend.pos="bottomright")
+
+## ----plotBiplot5, echo = FALSE, eval=TRUE, fig.width= 5, fig.height=3---------
+graphics::par(mar=c(2.8, 4.1, 0, 2.1), mgp=c(1.5, 0.5, 0), cex.axis=1, cex.lab=0.8, lwd=0.9)
+plotBiplot(cda.stPsHybr, col = c("blue","red","orange"), pch = c(8,20,18), 
+            legend = T, ncol = 2, legend.pos="bottomleft")
+
 
 ## ----echo = TRUE, eval=FALSE--------------------------------------------------
 #  

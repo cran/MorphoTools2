@@ -17,7 +17,7 @@ plotAddEllipses(result, axes = c(1,2), probability = 0.95, col = "black",
 \item{axes}{x, y axes of plot.}
 \item{probability}{probability, that a new independent observation from the same population will fall in that ellipse.}
 \item{col}{the colours for labels.}
-\item{type}{character indicating the type of plotting, for details, see \code{\link{plot}}: \code{"p"} for points, \code{"l"} for lines, \code{"b"} for both points and lines, \code{"c"} for empty points joined by lines, \code{"o"} for overplotted points and lines, \code{"s"} and \code{"S"} for stair steps and \code{"h"} for histogram-like vertical lines.}
+\item{type}{character indicating the type of plotting, for details, see \code{\link[base]{plot}}: \code{"p"} for points, \code{"l"} for lines, \code{"b"} for both points and lines, \code{"c"} for empty points joined by lines, \code{"o"} for overplotted points and lines, \code{"s"} and \code{"S"} for stair steps and \code{"h"} for histogram-like vertical lines.}
 \item{lty}{the line type. Line types can either be specified as one of following types: \code{0}=blank, \code{1}=solid (default), \code{2}=dashed, \code{3}=dotted, \code{4}=dotdash, \code{5}=longdash, \code{6}=twodash.}
 \item{lwd}{the line width.}
 \item{...}{further arguments to be passed to \code{\link{lines}} or other graphical parameters in \code{\link{par}}.}
