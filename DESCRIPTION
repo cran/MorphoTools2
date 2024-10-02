@@ -1,7 +1,7 @@
 Package: MorphoTools2
 Type: Package
 Title: Multivariate Morphometric Analysis
-Version: 1.0.2.0
+Version: 1.0.2.1
 Date: 2024-10-01
 Authors@R: c(
     person("Marek", "Šlenker", email = "marek.slenker@savba.sk", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-5919-890X")),
@@ -27,4 +27,4 @@ Author: Marek Šlenker [aut, cre] (<https://orcid.org/0000-0002-5919-890X>),
   Petr Koutecký [ctb] (<https://orcid.org/0000-0002-3455-850X>),
   Karol Marhold [ctb] (<https://orcid.org/0000-0002-7658-0844>)
 Repository: CRAN
-Date/Publication: 2024-09-30 08:40:02 UTC
+Date/Publication: 2024-10-02 12:10:02 UTC

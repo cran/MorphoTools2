@@ -1,4 +1,4 @@
-9b92b45146a268488bc131392be192bc *DESCRIPTION
+33b88216ec68149f9d61691c21901641 *DESCRIPTION
 8f24a3911b9ceabbdc890acb1149ea23 *NAMESPACE
 236a3fea2a29aeb8717a6d2f98628291 *NEWS.md
 3e512c6b1989e738fb412d52bd10b3cf *R/BoxMTest.R
@@ -35,7 +35,7 @@ f9eba529224906d5cd3fe55bf8586914 *R/plot.addLabels.characters.R
 6de3c91ed7fa0c89cae6daa29b05291f *R/plot.addLabels.points.R
 dfd573bbed83386e78b835ad29dcd741 *R/plot.addLegend.R
 803552f0377e994c77351e6b12c8bd23 *R/plot.addSpiders.R
-d2245e416e9cc9d7fd28cacb39f26fde *R/plot.biplot.R
+a31b3b9787b64d9863a1cce8fe318258 *R/plot.biplot.R
 c7a692351f6ab0aa05a0b8e1a401f568 *R/plot.characters.R
 6377633a8dfa4594bca0bbc07d459302 *R/plot.points.R
 5f3ea6526f82b0e4fc0c7153c567af22 *R/popul.otu.R
